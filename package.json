@@ -1,0 +1,20 @@
+{
+  "name": "hcms-monorepo",
+  "version": "1.0.0",
+  "description": "Headless CMS Monorepo",
+  "main": "index.js",
+  "author": "Umar Farooque",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "start:frontend": "yarn workspace hcms-react dev",
+    "start:backend": "yarn workspace hcms-node start",
+    "start:both": "concurrently \"yarn start:frontend\" \"yarn start:backend\""
+  },
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
